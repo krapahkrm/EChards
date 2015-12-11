@@ -49,5 +49,10 @@ public class EditingRiff extends AppCompatActivity {
         else {
             db.update(mDatabaseHelper.DATATABLE_RIFFS, mContentValues, "_id "+"="+_ID,null);
         }
+
+        Intent intent = new Intent(EditingRiff.this, RiffsView.class);
+        startActivity(intent);
+
+        this.finish();
     }
 }

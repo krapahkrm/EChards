@@ -46,5 +46,11 @@ public class EditingBand extends AppCompatActivity {
         else {
             db.update(mDatabaseHelper.DATATABLE_BANDS, mContentValues, "_id "+"="+_ID,null);
         }
+
+
+        Intent intent = new Intent(EditingBand.this, BandsView.class);
+        startActivity(intent);
+
+        this.finish();
     }
 }
